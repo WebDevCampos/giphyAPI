@@ -27,11 +27,11 @@ const gifDisplay = document.querySelector('.out')
 
 form.addEventListener('submit', (event) => {
 	event.preventDefault()
-
+	const apiKey = 'W9noCcFpcI3dq4pKsWDX8tiyuZycGgVq'
+	const searchValue = event.target.search.value
+	const url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=1&q=${searchValue}`
 	const getAGif = async () => {
-		const response = await fetch(
-			`https://api.giphy.com/v1/gifs/search?api_key=W9noCcFpcI3dq4pKsWDX8tiyuZycGgVq&limit=1&q=${event.target.search.value}`
-		)
+		const response = await fetch(url)
 		return response.json()
 	}
 
@@ -43,10 +43,11 @@ form.addEventListener('submit', (event) => {
 		Object.assign(gif, {
 			width: 300,
 			height: 400,
-			src: show.data[0].images.original.url
+			src: show.data[0].images.downsized.url,
+			alt: 'A fun GIF'
 		})
 	}
 
 	showAGif()
-  event.target.reset()
+	event.target.reset()
 })
