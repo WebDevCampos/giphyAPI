@@ -10,18 +10,24 @@ html {
 	justify-content: center;
 	align-items: center;
 	background-color: aqua;
-	margin: 0 auto;
+	margin: 10px auto;
 	box-shadow: 14px 14px purple;
 	width: 600px;
 }
 .app-heading {
-	background-color: white;
-	padding: 15px;
+background-color: white;
+text-align:center;
+padding:0 15px;
+margin-top:20px
+}
+.small{
+	display:block;
+	font-size:16px;
 }
 #search {
 	width: 80%;
 	padding: 12px 20px;
-  
+  font-size:20px;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;

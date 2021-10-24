@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="./style.css">
   <title>Testando a API do GIPHY</title>
 </head>
+
 <body>
   <div class="wrapper">
-    <h1 class="app-heading">Testando a API do GIPHY</h1>
+    <div class="app-heading">
+      <h1>Testando a API do GIPHY <span class="small">Digite algo e encontre um gif divertido.</span></h1>
+      <h5>Testing GIPHY's API. Type in and search a nice gif.</h5>
+    </div>
 
-  <main class="content">
-    <form class="giphy-search">
-      <input id="search" type="search" autofocus autocomplete="off" />
-      <button id="btnSearch">Buscar</button>
-    </form>
-    
-    <div class="out"></div>
-  </main>
+
+    <main class="content">
+      <form class="giphy-search">
+        <input id="search" type="search" autofocus autocomplete="off" />
+        <button id="btnSearch">Buscar</button>
+      </form>
+
+      <div class="out"></div>
+    </main>
   </div>
-  
-  
+
+
   <script src="./app.js"></script>
 </body>
+
 </html>
