@@ -28,6 +28,8 @@ const gifDisplay = document.querySelector('.out')
 
 const accessGIPHYAPI = (event) => {
 	event.preventDefault()
+
+  
 	if (event.target.search.value.trim()) {
 		const apiKey = 'W9noCcFpcI3dq4pKsWDX8tiyuZycGgVq'
 		const searchValue = event.target.search.value
@@ -41,10 +43,11 @@ const accessGIPHYAPI = (event) => {
 		const showAGif = async () => {
 			const show = await getAGif()
 			const gif = document.createElement('img')
-
+console.log(show)
 			displayGIF(gif, show)
+      
 		}
-
+    
 		showAGif()
 		event.target.reset()
 	}
@@ -53,10 +56,15 @@ const accessGIPHYAPI = (event) => {
 const displayGIF = (gif, show) => {
 	gifDisplay.insertAdjacentElement('afterbegin', gif)
 	Object.assign(gif, {
-		width: 300,
-		height: 400,
+		className:'picture-GIPHY',
+    
 		src: show.data[0].images.downsized.url,
-		alt: 'A fun GIF'
+		alt: 'A fun GIF',
+  
 	})
+
+  
 }
 form.addEventListener('submit', accessGIPHYAPI)
+
+
