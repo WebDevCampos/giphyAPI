@@ -13,12 +13,18 @@ html {
 	margin: 10px auto;
 	box-shadow: 14px 14px purple;
 	width: 600px;
+	
+}
+
+.app-heading,.app-heading h1,.app-heading h5,.small{
+	transition:all .5 ease-in-out;
 }
 .app-heading {
 	background-color: white;
 	text-align: center;
 	padding: 0 15px;
 	margin-top: 20px;
+
 }
 .small {
 	display: block;
@@ -63,15 +69,17 @@ html {
 	.app-heading h1 {
 		font-size: 24px;
 	}
-
-	.app-heading h5, .small {
-		font-size: 14px;
+.small{
+	font-size: 14px;
+}
+	.app-heading h5{
+		font-size: 12px;
 	}
 	
 	.giphy-search {
 		width: 100%;
 		display: flex;
-		border: 1px solid red;
+		
 		justify-content: space-between;
 		margin: 10px;
 	}
@@ -83,6 +91,48 @@ html {
 	.content {
 		width: 200px;
 		padding: 16px;
+	}
+
+	.picture-GIPHY {
+		width: 200px;
+		height: 200px;
+	}
+}
+@media screen and (max-width: 400px) {
+	.wrapper {
+		width: 300px;
+	}
+	.app-heading{
+		padding:5px;
+	}
+	.app-heading h1 {
+		padding:0;
+		font-size: 16px;
+	}
+
+	.app-heading h5 {
+		padding:0;
+		font-size:12px;
+	}
+	.small{
+		font-size: 10px;
+	}
+		
+	.giphy-search {
+		width: 100%;
+		display: flex;
+		
+		justify-content: space-between;
+		margin: 10px;
+	}
+
+	#search {
+		padding: 5px 10px;
+		font-size: 12px;
+	}
+	.content {
+		width: 200px;
+		padding: 10px;
 	}
 
 	.picture-GIPHY {
