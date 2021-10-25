@@ -22,7 +22,7 @@
   - Ignore os avisos no console. Para limpá-lo, pressione "ctrl + L".
   */
 
-const form = document.querySelector('.giphy-search')
+const form = document.querySelector('form')
 
 const gifDisplay = document.querySelector('.out')
 
@@ -56,15 +56,13 @@ console.log(show)
 const displayGIF = (gif, show) => {
 	gifDisplay.insertAdjacentElement('afterbegin', gif)
 	Object.assign(gif, {
-		className:'picture-GIPHY',
-    
+		className:'picture-GIPHY',    
 		src: show.data[0].images.downsized.url,
 		alt: 'A fun GIF',
   
-	})
-
-  
+	})  
 }
+
 form.addEventListener('submit', accessGIPHYAPI)
 
 
